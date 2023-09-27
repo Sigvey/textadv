@@ -12,25 +12,33 @@
         <h1>Visual Novel Menu</h1>
         <button id="start-button">Start from the Beginning</button>
         <button id="mload-button">Load Save</button>
+        <p></p>
+        <button onclick="openFullscreen();">Open Fullscreen</button>
+        <button onclick="closeFullscreen();">Close Fullscreen</button>
     </div>
 
     <!-- Visual Novel Screen -->
+
     <div id="scene-container" class="hidden">
-        <img id="background" src="" alt="Background">
-        <div id="characters">
-            <img id="character-1" src="" alt="Character 1">
-            <img id="character-2" src="" alt="Character 2">
+
+        <div id="background-container">
+            <img id="background" src="" alt="Background">
         </div>
-        <div id="text-box">
-            <p id="character-name"></p>
-            <p id="dialogue"></p>
+        <div id="content-container">
+            <div id="characters">
+                <img id="character-1" src="" alt="Character 1">
+                <img id="character-2" src="" alt="Character 2">
+            </div>
+            <div id="text-box">
+                <p id="character-name"></p>
+                <p id="dialogue"></p>
+            </div>
+            <div id="choices">
+                <button id="save-button">Save</button>
+                <button id="gload-button">Load</button>
+                <button id="menu-button">Menu</button>
+            </div>
         </div>
-        <div id="choices">
-            <button id="save-button">Save</button>
-            <button id="gload-button">Load</button>
-            <button id="menu-button">Menu</button>
-        </div>
-        
     </div>
     
     

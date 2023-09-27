@@ -4,21 +4,27 @@
     position: relative;
 }
 
-#background {
-    width: 100%;
-    height: auto;
-    
-    position:absolute;
-    z-index: -1;
+#background-container {
+    text-align: center;
+    position: absolute;
+    left: 10%;
+    transform: translate(-50%);
+    top: 0; /* Добавляем верхний отступ */
+    width: 80%; /* Задаем ширину */
+    height: 99vh; /* Задаем высоту */
+}
 
+#background {
+    height: 100%; /* Устанавливаем высоту на 100% */
+    position: absolute;
+    z-index: -1;
 }
 
 #characters img {
-    width: 30vw;
+    width: 27vw;
     height: auto;
     position: relative;
     z-index: 1;
-    
 }
 
 #character-name,
@@ -31,28 +37,34 @@
     color: white;
     display: inline-block;
     word-wrap: break-word;
-    
 }
 
-#choices {  
-    color: white; 
+#choices button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-#character-2{
-    float: right; 
+#character-2 {
+    float: right;
 }
 
 #character-name {
     font-weight: bold;
-    
 }
 
-
-
-
-
-
-
+#content-container {
+    position: absolute;
+    top: 0;
+    left: 10%;
+    width: 80%;
+    height: 99vh;
+    padding-top: 12%;
+}
 
 /* menu styles */
 #menu {
@@ -84,4 +96,8 @@
 
 .hidden {
     display: none;
+}
+
+.blure {
+    filter: blur(5px);
 }

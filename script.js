@@ -1,6 +1,6 @@
 const scenes = [
     {
-        background: 'backgrounds/background1.png',
+        background: 'backgrounds/prison.jpg' ,
         characters: {
             'character-1': 'sprites/Female_04.png',
             'character-2': 'sprites/Female_11.png'
@@ -13,7 +13,8 @@ const scenes = [
         ]
     },
     {
-        background: 'scene2-background.jpg',
+
+        background: 'backgrounds/prison.jpg',
         characters: {
             'character-1': 'character3.png',
             'character-2': 'character4.png'
@@ -120,7 +121,15 @@ document.getElementById('menu-button').addEventListener('click', () => {
 });
 
 
+function showBlure() {
+    const backgroundElement = document.getElementById('background-container');
+    backgroundElement.classList.add('blure');
+}
 
+function hideBlure() {
+    const backgroundElement = document.getElementById('background-container');
+    backgroundElement.classList.remove('blure');
+}
 
 function showMenu() {
     const menuElement = document.getElementById('menu');
@@ -130,7 +139,6 @@ function showMenu() {
     sceneContainer.classList.add('hidden');
 }
 
-// Function to show the visual novel screen and hide the menu
 function showVisualNovel() {
     const menuElement = document.getElementById('menu');
     const sceneContainer = document.getElementById('scene-container');
@@ -153,3 +161,31 @@ document.getElementById('mload-button').addEventListener('click', () => {
     loadGame();
     showVisualNovel();
 });
+
+
+
+
+
+
+
+
+var elem = document.documentElement;
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+  }
+}
+
+function closeFullscreen() {
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if (document.webkitExitFullscreen) { /* Safari */
+    document.webkitExitFullscreen();
+  } else if (document.msExitFullscreen) { /* IE11 */
+    document.msExitFullscreen();
+  }
+}
