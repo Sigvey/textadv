@@ -1,68 +1,92 @@
 /* game styles */
 
+body, html {
+    height: 100%; /* Устанавливаем высоту на 100% для всей страницы */
+    margin: 0; /* Убираем отступы по умолчанию */
+    overflow: hidden; /* Предотвращаем появление полос прокрутки */
+}
+
 #scene-container {
     position: relative;
+    height: 100%; /* Устанавливаем высоту на 100% для контейнера сцены */
 }
+
 
 #background-container {
     text-align: center;
     position: absolute;
-    left: 10%;
-    transform: translate(-50%);
-    top: 0; /* Добавляем верхний отступ */
-    width: 80%; /* Задаем ширину */
-    height: 99vh; /* Задаем высоту */
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1; /* Задаем z-index для фона */
 }
-
+    
 #background {
-    height: 100%; /* Устанавливаем высоту на 100% */
-    position: absolute;
-    z-index: -1;
+    width: auto;
+    height: 100%;
+    object-fit: cover; /* Позволяет фону занимать всю доступную область */
 }
 
 #characters img {
-    width: 27vw;
-    height: auto;
+    
+    max-height:50lvh; /* Максимальная высота для персонажей */
     position: relative;
     z-index: 1;
 }
 
 #character-name,
+#choices button,
 #dialogue {
-    position: relative;
-    z-index: 2;
-    background-color: black;
-    padding: 10px;
-    border-radius: 5px;
-    color: white;
-    display: inline-block;
-    word-wrap: break-word;
-}
 
-#choices button {
-    padding: 10px 20px;
+    position: absolute;
+    z-index: 2;
+    padding: 10px;
     font-size: 18px;
     background-color: black;
     color: white;
     border: none;
     border-radius: 5px;
+    top: 70%; /* Примерное положение, которое может потребоваться настроить */
+    left: 20%; /* Примерное положение, которое может потребоваться настроить */
+    transform: translateY(-50%);
+}
+
+#character-name {
+    position: relative;
+    font-weight: bold;
+    display: inline-block; 
+}
+
+#dialogue {
+    position: relative;
+    display: inline-block; 
+    
+}
+
+#choices button {
+    position: relative;
+    display: inline-block; 
     cursor: pointer;
 }
 
 #character-2 {
-    float: right;
+    float:right;
+    right: 15%;
+}
+#character-1 {
+    left: 15%;
 }
 
-#character-name {
-    font-weight: bold;
-}
+
 
 #content-container {
     position: absolute;
-    top: 0;
-    left: 10%;
-    width: 80%;
-    height: 99vh;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: auto; /* Убираем привязку к верхнему краю */
+    height: auto;
     padding-top: 12%;
 }
 
